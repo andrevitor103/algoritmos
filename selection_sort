@@ -1,0 +1,13 @@
+values = [29,10,14,37,14]
+
+len_list = len(values)
+
+for current_index in range(0, len_list):
+    selection = current_index
+    for index in range(current_index+1, len_list):
+        selection = selection if values[selection] < values[index] else index
+    aux = values[current_index]
+    values[current_index] = values[selection]
+    values[selection] = aux
+
+print(values)
